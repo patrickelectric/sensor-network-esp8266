@@ -15,7 +15,7 @@ void Data::jsonSet(const char* key, const char* value)
 
 void Data::updateJson()
 {
-    StaticJsonBuffer<10 * 1024> jsonBuffer;
+    StaticJsonBuffer<1024> jsonBuffer;
     root = &jsonBuffer.createObject();
     jsonSet("Sensor", data->hostName.c_str());
 
